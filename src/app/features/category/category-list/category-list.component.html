@@ -3,30 +3,27 @@
   <div class="title-main">
     <img src="assets/imagens/florDeLotus.png" alt="">
     <h1 class="mt-3">Categorias</h1>
-  </div>
+  </div> 
+  <ng-container *ngIf="categories">
     <div class="table">
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Description</th>
+                <th scope="col">Descrição</th>
                 <th scope="col">Image URL</th>
-                <th scope="col"><a [routerLink]="['/admin/categories/add']" class="btn btn-primary">Nova categoria</a></th>
+                <th scope="col"><a routerLink="add-category" class="btn btn-primary">Nova categoria</a></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
+              <tr *ngFor="let category of categories">
+                <td>{{category.id}}</td>
+                <td>{{category.description}}</td>
+                <td>{{category.imageURL}}</td>
+                <!-- <td></td> -->
               </tr>
             </tbody>
           </table>
     </div>
+    </ng-container>
 </div>

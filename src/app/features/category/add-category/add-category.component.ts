@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AddCategoryRequest } from '../models/add-category-request.models';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-category',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './add-category.component.html',
   styleUrl: './add-category.component.css'
 })
